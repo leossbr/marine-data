@@ -10,16 +10,16 @@ ui <- shinyUI(
     sidebar_layout(
       sidebar_panel = sidebar_panel(
         p("Select the ship's type"),
-        dropdown_input(
-          default_text = "Ship type",
-          input_id = "ship_type",
+        dropdown_UI(
+          id = "type",
+          label = "Ship type",
           choices = sort(unique(ships$ship_type))
         ),
         br(),
         p("Select the ship"),
-        dropdown_input(
-          default_text = "Ship name",
-          input_id = "ship_name",
+        dropdown_UI(
+          id = "name",
+          label = "Ship name",
           choices = ships$ship_name
         )
       ),
@@ -40,7 +40,7 @@ ui <- shinyUI(
           ),
           card(
             div(class="content",
-                div(class="header", "Flag"),
+                div(class="header", "Ship's Flag"),
                 htmlOutput("flag")
             )
           )

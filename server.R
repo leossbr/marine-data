@@ -1,26 +1,13 @@
 
 server <- function(input, output, session) {
   
-  observeEvent(
-    eventExpr = input$ship_type,
-    handlerExpr = {
-      
-      updated_ships <- ships[ship_type == input$ship_type]
-      updated_ships <- updated_ships[order(-distance), ship_name] 
-      
-      update_dropdown_input(
-        session = session,
-        input_id = "ship_name",
-        choices = updated_ships
-      )
-      
-    }
-  )
+  type <- dropdown_type_Server(id = "type")
+  name <- dropdown_name_Server(id = "name", type = type)
   
   # reactive observation
   observation <- reactive(
     x = {
-      ships[ship_name == input$ship_name]
+      ships[ship_name == name()]
     }
   )
   

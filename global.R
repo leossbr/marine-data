@@ -1,14 +1,14 @@
 
 # libs
 library(data.table)
-library(shiny)
 library(shiny.semantic)
+library(shiny)
 library(leaflet)
 library(geosphere)
 
 # loading the data
 ships <- readRDS("./data/ships-db.rds")
 
-#shinyApp(ui, server)
-
+# loading the modules
+source("./src/utils.R")
 
