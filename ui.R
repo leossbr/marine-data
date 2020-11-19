@@ -21,7 +21,9 @@ ui <- shinyUI(
           id = "name",
           label = "Ship name",
           choices = ships$ship_name
-        )
+        ),
+        br(),
+        uiOutput("accordion")
       ),
       main_panel = main_panel(
         cards(

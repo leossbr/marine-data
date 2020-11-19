@@ -5,8 +5,8 @@ account: leonardosiq91
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3261502
-bundleId: 3877940
+bundleId: 3878214
 url: https://leonardosiq91.shinyapps.io/marine-data/
-when: 1605740700.11262
+when: 1605746771.29363
 asMultiple: FALSE
 asStatic: FALSE

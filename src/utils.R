@@ -46,3 +46,20 @@ dropdown_name_Server <- function(id, type) {
     }
   )
 }
+
+# format_meter
+f_meter <- function (x) {
+  paste(format(round(x), big.mark = ".", decimal.mark = ","), "m")
+}
+
+
+
+
+
+
+
+
+
+
+
+
